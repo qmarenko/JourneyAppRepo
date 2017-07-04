@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="JourneysApp" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\slawek\\documents\\visual\ studio\ 2017\\Projects\\JourneysApp\\JourneysApp\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\slawek\\documents\\visual\ studio\ 2017\\Projects\\JourneysApp\\JourneysApp\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ProdConnection-Web.config Connection String" description="" value="Data Source=tcp:journeysappdbserver.database.windows.net,1433;Initial Catalog=JourneysApp;Persist Security Info=False;User ID=app_user;Password=Slakom_35;MultipleActiveResultSets=False;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\slawek\\documents\\visual\ studio\ 2017\\Projects\\JourneysApp\\JourneysApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ProdConnection']/@connectionString" />
+  </parameter>
+  <parameter name="AD_APPIDUri" description="" value="https://slaw3kk0margmail.onmicrosoft.com/WebApp-journeysapp.azurewebsites.net" tags="" />
+  <parameter name="AD_ClientID" description="" value="b652d0e0-8249-4eb1-ae55-0b5131016249" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\slawek\\documents\\visual\ studio\ 2017\\Projects\\JourneysApp\\JourneysApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/appSettings/add[@key='ida:ClientId']/@value" />
+  </parameter>
+  <parameter name="AD_MetadataUrl" description="" value="https://login.windows.net/slaw3kk0margmail.onmicrosoft.com/FederationMetadata/2007-06/FederationMetadata.xml" tags="" />
+  <parameter name="AD_ClientPassword" description="" value="kfe8RPtQd1Dy5wlFngpdnUjF4KvN52RIXD0GMiUW/e0=" tags="" />
+  <parameter name="AD_RealmAppSetting" description="" value="https://slaw3kk0margmail.onmicrosoft.com/WebApp-journeysapp.azurewebsites.net" tags="" />
+  <parameter name="AD_AudienceUriAppSetting" description="" value="https://slaw3kk0margmail.onmicrosoft.com/WebApp-journeysapp.azurewebsites.net" tags="" />
+  <parameter name="AD_TenantId" description="" value="7bf40e26-0f08-4f84-8fe8-3ee69ac63fb5" tags="" />
+  <parameter name="AD_Domain" description="" value="slaw3kk0margmail.onmicrosoft.com" tags="" />
+  <parameter name="AD_PostLogoutRedirectUri" description="" value="https://journeysapp.azurewebsites.net/" tags="" />
+</parameters>

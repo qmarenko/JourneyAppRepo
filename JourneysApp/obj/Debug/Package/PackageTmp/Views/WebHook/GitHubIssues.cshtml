@@ -1,0 +1,49 @@
+﻿@model IEnumerable<JourneysApp.Models.GitHubIssue>
+
+@{
+    ViewBag.Title = "GitHubIssues";
+}
+
+<h2>GitHubIssues</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IssueUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserAdded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateTime)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            <a href="@item.IssueUrl">Details on GitHub</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateTime)
+        </td>
+    </tr>
+}
+
+</table>

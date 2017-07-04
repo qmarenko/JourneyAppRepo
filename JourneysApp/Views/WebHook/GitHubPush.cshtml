@@ -1,0 +1,91 @@
+﻿@model IEnumerable<JourneysApp.Models.GitHubPush>
+
+@{
+    ViewBag.Title = "GitHubPush";
+}
+
+<h2>GitHubPush</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.@Ref)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Before)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.After)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PusherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PusherEmail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.@Ref)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Before)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.After)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PusherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PusherEmail)
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="5">
+            <b>Commits in push id: @item.Id</b>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="4">
+            <table class="table">
+                <tr>
+                    <th>
+                        Commit comment
+                    </th>
+                    <th>
+                        Author
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                </tr>
+
+                @foreach (var commit in item.Commits)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => commit.CommitComment)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => commit.AuthorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => commit.AuthorEmail)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </td>
+    </tr>
+}
+
+</table>
